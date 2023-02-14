@@ -5,8 +5,12 @@ _component_func = components.declare_component(
     path="./tabulator_table"
 )
 
-def tabulator(data):
+def tabulator(data,code,key):
     # spec = json.dumps(fig, cls=PlotlyJSONEncoder)
     spec = data
-    component_value = _component_func(spec = spec, default = None)
+    key = key
+    code=  code
+    component_value = _component_func(spec = spec,key = key, code=code)
     return component_value
+
+
